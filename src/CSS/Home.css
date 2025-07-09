@@ -1,0 +1,250 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #111827, #6b21a8, #7e22ce);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.bg-effects {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.2;
+  animation: pulse 6s infinite ease-in-out;
+}
+
+.bg-circle.purple {
+  width: 320px;
+  height: 320px;
+  background: #a855f7;
+  top: -150px;
+  right: -150px;
+}
+
+.bg-circle.pink {
+  width: 320px;
+  height: 320px;
+  background: #ec4899;
+  bottom: -150px;
+  left: -150px;
+  animation-delay: 2s;
+}
+
+.bg-circle.blue {
+  width: 380px;
+  height: 380px;
+  background: #3b82f6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  animation-delay: 4s;
+}
+
+.hero-content {
+  z-index: 10;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+  align-items: center;
+}
+
+.text-column h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hi-text {
+  color: #fff;
+}
+
+.name-text {
+  background: linear-gradient(to right, #c084fc, #f472b6, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+
+.title-text {
+  font-size: 1.4rem;
+  color: #d1d5db;
+  margin-top: 1rem;
+}
+
+.desc-text {
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.primary-btn {
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px #8b5cf6aa;
+}
+
+.secondary-btn {
+  border: 2px solid #c084fc;
+  color: #c084fc;
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  background: #c084fc;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  width: 48px;
+  height: 48px;
+  background: #1f2937;
+  border-radius: 9999px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-column {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #a855f7;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.profile-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floating {
+  position: absolute;
+  border-radius: 50%;
+  animation: bounce 2s infinite;
+}
+
+.purple-float {
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: #a855f7;
+}
+
+.pink-float {
+  bottom: -10px;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  background: #ec4899;
+  animation-delay: 1s;
+}
+
+.blue-float {
+  top: 50%;
+  right: -20px;
+  width: 14px;
+  height: 14px;
+  background: #3b82f6;
+  animation: pulse 2s infinite;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator button {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.scroll-indicator button:hover {
+  color: white;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
