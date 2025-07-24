@@ -47,8 +47,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="signature">
-              <img src="/signature.png" alt="Signature" />
+            
               <a href="#contact" className="cta-button">
                 Let's Connect
                 <span className="arrow">→</span>
@@ -56,7 +55,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+     
     </section>
   );
 };
